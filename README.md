@@ -64,7 +64,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        
   </body>
 ```
 ___
-#### Ссылка на [докер хаб](https://hub.docker.com/layers/unkindy/otus/latest/images/sha256-ee18fee974a024534ea626bfa4c0579d6418094d22ba9f54a628b9a5b112bb43?context=repo):
+#### Ссылка на [докер хаб](https://hub.docker.com/repository/docker/unkindy/otus):
 ___
 #### Ответы на вопросы:
 1. Опеределить разницу между контейнером и образом.
