@@ -9,7 +9,7 @@ COPY index.html /usr/share/nginx/html/              -   копируем кас�
 EXPOSE 90                                           -   прокидываем 90 порт из контейнера;
 CMD [ "nginx", "-g", "daemon off;" ]                -   запускаем nginx c параметрами -g и daemon off.
 ```
-Файлы [nginx.conf]() и [index.html](https://github.com/uNkindy/Otus_Unit_12_Docker/blob/main/index.html) прилагаются.
+Файлы [nginx.conf](https://github.com/uNkindy/Otus_Unit_12_Docker/blob/main/nginx.conf) и [index.html](https://github.com/uNkindy/Otus_Unit_12_Docker/blob/main/index.html) прилагаются.
 
 #### 2. Билдим образ otus из докерфайла:
 ```console
