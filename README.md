@@ -4,11 +4,12 @@
 FROM alpine                                         -   скачиваем базовый образ alpinel;
 RUN apk update  && apk upgrade && apk add nginx     -   обновляем образ alpine и ставим пакет nginx;
 RUN rm /etc/nginx/nginx.conf                        -   удаляем дефолтный конфигурационный файл nginx.conf;
-COPY nginx.conf /etc/nginx/nginx.conf               -   копируем кастомный конф. файл [nginx.conf](), меняем listening с 80 на 90;
-COPY index.html /usr/share/nginx/html/              -   копируем кастомную дефолтную страницу [index.html];
+COPY nginx.conf /etc/nginx/nginx.conf               -   копируем кастомный конф. файл nginx.conf, меняем listening с 80 на 90;
+COPY index.html /usr/share/nginx/html/              -   копируем кастомную дефолтную страницу index.html;
 EXPOSE 90                                           -   прокидываем 90 порт из контейнера;
 CMD [ "nginx", "-g", "daemon off;" ]                -   запускаем nginx c параметрами -g и daemon off.
 ```
+Файлы [nginx.conf]() [index.html]() прилагаются.
 
 #### 2. Билдим образ otus из докерфайла:
 ```console
