@@ -37,6 +37,31 @@ Removing intermediate container 823a16478357
 Successfully built 088563a0ed26
 Successfully tagged otus:latest
 ```
+
+#### 3. Запускаем кастомный образ:
+```console
+[kita@devops Docker]$ sudo docker run --name nginx_otus -p 127.0.0.1:90:90 -d otus
+85f735c49de04f41b5746555f73af6b8b436e27ff899aeed09adf80125ea5224
+```
+Проверим статус запущенного контейнера:
+```console
+[kita@devops Docker]$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                  NAMES
+85f735c49de0   otus      "nginx -g 'daemon of…"   6 seconds ago   Up 5 seconds   127.0.0.1:90->90/tcp   nginx_otus
+```
+Проверим работу nginx:
+```console
+[kita@devops Docker]$ curl 127.0.0.1:90
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OTUS HomeWork</title>
+  </head>
+  <body>
+    Привет
+  </body>
+```
 ___
 #### Ответы на вопросы:
 1. Опеределить разницу между контейнером и образом.
