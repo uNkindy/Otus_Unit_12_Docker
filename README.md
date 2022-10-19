@@ -1,4 +1,4 @@
-### Домашнее задание №12 (Docker)
+### Домашнее задание №13 (Docker)
 #### 1. Для сборки кастомного образа nginx на базе alpine написан следующий [Dockerfile](https://github.com/uNkindy/Otus_Unit_12_Docker/blob/main/Dockerfile):
 ```console
 FROM alpine                                         -   скачиваем базовый образ alpinel;
